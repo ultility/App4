@@ -19,6 +19,7 @@ namespace App4
         TextView txtId;
         TextView txtName;
         ListView lv;
+        PersonAdapter Adapter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -51,12 +52,7 @@ namespace App4
             txtName.Text = string.Empty;
             Toast.MakeText(this, "person added successfully", ToastLength.Long).Show();
             var allPersons = await FirebaseHelper.GetAllPersons();
-            lv = allPersons;
-        }
-
-        public override bool OnTouchEvent(MotionEvent e)
-        {
-            return base.OnTouchEvent(e);
+            Adapter.objects = allPersons;
         }
     }
 
