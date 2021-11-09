@@ -16,7 +16,7 @@ namespace App4
 {
     public static class FirebaseHelper
     {
-        static FirebaseClient firebase = new FirebaseClient("https://xamarinfirebase-909d2.firebaseio.com/");
+        static FirebaseClient firebase = new FirebaseClient("https://test-e41fe-default-rtdb.europe-west1.firebasedatabase.app/");
 
         public static async Task<List<Person>> GetAllPersons()
         {
